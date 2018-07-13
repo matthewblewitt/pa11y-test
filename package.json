@@ -1,0 +1,25 @@
+{
+  "name": "pa11y-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "NODE_ENV=testing mocha ./**/*.spec.js",
+    "test:watch": "NODE_ENV=testing mocha --watch ./**/*.spec.js",
+    "test-ci": "killall node; npm run start & sleep 3; pa11y-ci --config pa11y-ci.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.0",
+    "pa11y": "^5.0.4",
+    "pa11y-ci": "^2.1.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
